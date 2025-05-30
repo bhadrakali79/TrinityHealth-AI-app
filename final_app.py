@@ -9,12 +9,12 @@ st.set_page_config(page_title="TrinityHealth AI - Multi Disease Prediction",
 
 # =============== Load Models and Scalers ===============
 # Diabetes
-diabetes_data = pickle.load(open('C:/Users/DELL/Documents/Project_MSc - Copy/diabetes_model_final2.sav', 'rb'))
+diabetes_data = pickle.load(open('diabetes_model_final2.sav', 'rb'))
 diabetes_model = diabetes_data['model']
 diabetes_scaler = diabetes_data['scaler']
 
 # Heart Disease
-heart_disease_data = pickle.load(open('C:/Users/DELL/Documents/Project_MSc - Copy/heart_disease_model_final.sav', 'rb'))
+heart_disease_data = pickle.load(open('heart_disease_model_final.sav', 'rb'))
 if isinstance(heart_disease_data, dict):
     heart_disease_model = heart_disease_data['model']
     heart_disease_scaler = heart_disease_data.get('scaler', None)
@@ -23,7 +23,7 @@ else:
     heart_disease_scaler = None
 
 # Parkinson's
-parkinsons_data = pickle.load(open('C:/Users/DELL/Documents/Project_MSc - Copy/parkinsons_model_final2.sav', 'rb'))
+parkinsons_data = pickle.load(open('parkinsons_model_final2.sav', 'rb'))
 parkinsons_model = parkinsons_data['model']
 parkinsons_scaler = parkinsons_data['scaler']
 
